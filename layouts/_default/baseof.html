@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		{{ partial "analytics/google_analytics" . }}
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
@@ -138,7 +139,6 @@
 			</p>
 		</footer>
 		{{ end }}
-	{{ template "_internal/google_analytics_async.html" . }}
 	{{ with .Site.Params.foot }}{{ range . }}
 	{{ . | safeHTML }}{{ end }}{{ end }}
 	</body>
